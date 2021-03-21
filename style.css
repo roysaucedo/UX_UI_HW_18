@@ -1,0 +1,230 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #2E2E2E;
+}
+
+/* Grid CSS */
+
+#heroGrid {
+  margin: 0px 5%;
+  display: grid;
+  min-height: 700px;
+  height: 70vh;
+  grid-template-rows: 500px 200px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "featuredProduct secondaryProduct"
+  "featuredProduct CTA";
+}
+
+#HeroImage {
+  grid-area: featuredProduct;
+  background-image: url("../images/hero1.jpg");
+}
+
+
+#headline {
+  background-color: rgba(59, 59, 59, 0.8);
+  border-bottom: 5px solid #F44805;
+  position: absolute;
+  left: 50px;
+  top: 250px;
+  padding: 25px;
+  max-width: 800px;
+  z-index: 100;
+}
+
+.heroGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+/* Category Grid CSS */
+
+.subHeading {
+  text-align: center;
+  border-bottom: 2px solid #F44805;
+  width: 300px;
+  margin: 50px auto;
+}
+
+#casestudyGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 500px 500px 500px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "bookcases bookcases bookcases"
+  "couches couches couches"
+  "desks desks desks"
+  ;
+}
+
+#processGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "research sketch protoype livesite"
+  ;
+}
+
+#bookcases {
+  grid-area: bookcases;
+  background-image: url("../images/casestudy1image.jpg");
+
+}
+
+#couches {
+  grid-area: couches;
+  background-image: url("../images/casestudy2image.jpg");
+}
+
+#desks {
+  grid-area: desks;
+  background-image: url("../images/casestudy3image.jpg");
+}
+
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.processGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.heading {
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 5px solid #F44805;
+}
+
+
+/* Navigation CSS */
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 5%;
+}
+#navBar h1 {
+  width: 25%;
+  font-weight: 600;
+}
+#navigation {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
+}
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+.icons img {
+  margin: 15px;
+  cursor: pointer;
+}
+.highlight {
+  color: #F44805;
+  font-weight: 700;
+}
+
+/* Typography CSS */
+
+h1 {
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 60px;
+  margin: 0px 0px;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0px 0px;
+  color: white;
+}
+
+h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+p {
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+
+#headline p {
+  max-width: 350px;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0px 0px;
+  color: #636364;
+}
+
+@media only screen and (max-width: 1000px) {
+  #navigation {
+    display: none;
+  }
+  .icons {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #headline {
+    position: static;
+    margin: 20px;
+  }
+  #heroGrid {
+    grid-template-areas:
+    "featuredProduct featuredProduct"
+    "secondaryProduct CTA";
+  }
+  #categoryGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bookcases"
+      "bedroom"
+      "patio"
+      "couches"
+      "desks"
+    ;
+  }
+}
